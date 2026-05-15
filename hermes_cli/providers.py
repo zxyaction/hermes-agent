@@ -156,6 +156,11 @@ HERMES_OVERLAYS: Dict[str, HermesOverlay] = {
         is_aggregator=True,
         base_url_env_var="HF_BASE_URL",
     ),
+    "novita": HermesOverlay(
+        transport="openai_chat",
+        is_aggregator=True,
+        base_url_env_var="NOVITA_BASE_URL",
+    ),
     "xai": HermesOverlay(
         transport="codex_responses",
         base_url_override="https://api.x.ai/v1",
@@ -178,6 +183,11 @@ HERMES_OVERLAYS: Dict[str, HermesOverlay] = {
         transport="openai_chat",
         base_url_override="https://api.arcee.ai/api/v1",
         base_url_env_var="ARCEE_BASE_URL",
+    ),
+    "auriko": HermesOverlay(
+        transport="openai_chat",
+        base_url_override="https://api.auriko.ai/v1",
+        base_url_env_var="AURIKO_BASE_URL",
     ),
     "gmi": HermesOverlay(
         transport="openai_chat",
@@ -309,6 +319,10 @@ ALIASES: Dict[str, str] = {
     "hugging-face": "huggingface",
     "huggingface-hub": "huggingface",
 
+    # novita
+    "novita-ai": "novita",
+    "novitaai": "novita",
+
     # xiaomi
     "mimo": "xiaomi",
     "xiaomi-mimo": "xiaomi",
@@ -328,6 +342,9 @@ ALIASES: Dict[str, str] = {
     # arcee
     "arcee-ai": "arcee",
     "arceeai": "arcee",
+
+    # auriko
+    "auriko-ai": "auriko",
 
     # gmi
     "gmi-cloud": "gmi",
@@ -356,6 +373,7 @@ _LABEL_OVERRIDES: Dict[str, str] = {
     "stepfun": "StepFun Step Plan",
     "xiaomi": "Xiaomi MiMo",
     "gmi": "GMI Cloud",
+    "auriko": "Auriko",
     "tencent-tokenhub": "Tencent TokenHub",
     "lmstudio": "LM Studio",
     "local": "Local endpoint",
